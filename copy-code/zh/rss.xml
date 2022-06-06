@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope-v1.netlify.app/copy-code/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>代码一键复制</title>
+    <link>https://vuepress-theme-hope-v1.netlify.app/copy-code/zh/</link>
+    <description>VuePress 的代码一键复制插件</description>
+    <language>zh-CN</language>
+    <pubDate>Mon, 06 Jun 2022 17:22:42 GMT</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2022 17:22:42 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>插件选项</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/copy-code/zh/config.html</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/copy-code/zh/config.html</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/copy-code/rss.xml">插件选项</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="selector"> selector</h2>
+<ul>
+<li>类型: <code>string | string[]</code></li>
+<li>默认值: <code>'.theme-default-content div[class*=&quot;language-&quot;] pre'</code></li>
+</ul>
+<p>代码块选择器</p>
+<h2 id="duration"> duration</h2>
+<ul>
+<li>类型: <code>number</code></li>
+<li>默认值: <code>2000</code></li>
+</ul>
+<p>提示消息显示时间，设置为 <code>0</code> 会禁用提示。</p>
+<h2 id="showinmobile"> showInMobile</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认值: <code>false</code></li>
+</ul>
+<p>是否展示在移动端</p>
+<h2 id="delay"> delay</h2>
+<ul>
+<li>类型: <code>number</code></li>
+<li>默认值: <code>500</code></li>
+</ul>
+<p>注册复制按钮的延时，单位 ms。</p>
+<p>如果你使用的主题有切换动画，建议配置此选项为 <code>切换动画时长 + 200</code></p>
+<h2 id="pure"> pure</h2>
+<ul>
+<li>类型: <code>false</code></li>
+<li>默认值: <code>false</code></li>
+</ul>
+<p>是否生成样式纯净的小而简单的复制按钮。</p>
+<h2 id="locales"> locales</h2>
+<ul>
+<li>
+<p>类型: <code>CopyCodeLocaleConfig</code></p>
+<div><pre><code><span>interface</span> <span>CopyCodeLocaleData</span> <span>{</span>
+  <span>/**
+   * 复制按钮文字
+   */</span>
+  copy<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 复制成功提示消息文字
+   */</span>
+  hint<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+
+<span>interface</span> <span>CopyCodeLocaleConfig</span> <span>{</span>
+  <span>[</span>localePath<span>:</span> <span>string</span><span>]</span><span>:</span> CopyCodeLocaleData<span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div></li>
+<li>
+<p>必填: 否</p>
+</li>
+</ul>
+<p>复制按钮插件的国际化配置。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>指南</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/copy-code/zh/guide.html</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/copy-code/zh/guide.html</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/copy-code/rss.xml">指南</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="使用"> 使用</h2>
+<p>此插件会自动添加复制按钮到每个代码块的右下角。</p>
+<p>默认情况下，按钮仅在桌面模式显示，如果你需要在移动端展示这个按钮，请将 <code>showInMobile</code> 设置为 <code>true</code>。</p>
+<p>在用户点击复制按钮后，屏幕上会显示一个复制成功的提示。默认的提示时长为 2000ms，如果你需要更改这个时长，请设置 <code>duration</code>(单位 ms)，如果你不需要这个提示，请将 <code>duration</code> 设置为 <code>0</code>。</p>
+<h2 id="演示"> 演示</h2>
+<CodeGroup>
+<CodeGroupItem title=" TS">
+<div><pre><code><span>// .vuepress/config.ts</span>
+<span>export</span> <span>default</span> <span>{</span>
+  plugins<span>:</span> <span>[</span>
+    <span>[</span>
+      <span>"copy-code1"</span><span>,</span>
+      <span>{</span>
+        <span>// 插件选项</span>
+      <span>}</span><span>,</span>
+    <span>]</span><span>,</span>
+  <span>]</span><span>,</span>
+<span>}</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div></CodeGroupItem>
+<CodeGroupItem title=" JS">
+<div><pre><code><span>// .vuepress/config.js</span>
+module<span>.</span>exports <span>=</span> <span>{</span>
+  <span>plugins</span><span>:</span> <span>[</span>
+    <span>[</span>
+      <span>"copy-code1"</span><span>,</span>
+      <span>{</span>
+        <span>// 插件选项</span>
+      <span>}</span><span>,</span>
+    <span>]</span><span>,</span>
+  <span>]</span><span>,</span>
+<span>}</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div></CodeGroupItem>
+</CodeGroup>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

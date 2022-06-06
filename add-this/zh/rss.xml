@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope-v1.netlify.app/add-this/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>分享插件</title>
+    <link>https://vuepress-theme-hope-v1.netlify.app/add-this/zh/</link>
+    <description>由 AddThis 提供的分享插件</description>
+    <language>zh-CN</language>
+    <pubDate>Mon, 06 Jun 2022 17:22:37 GMT</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2022 17:22:37 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>插件选项</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/add-this/zh/config.html</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/add-this/zh/config.html</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/add-this/rss.xml">插件选项</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="pubid"> pubid</h2>
+<ul>
+<li>类型: <code>string</code></li>
+<li>必填: 是</li>
+</ul>
+<p>Add this 的 pubid</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>指南</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/add-this/zh/guide.html</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/add-this/zh/guide.html</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/add-this/rss.xml">指南</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="注册"> 注册</h2>
+<p>前往 <a href="https://www.addthis.com/register?next=/dashboard" target="_blank" rel="noopener noreferrer">Add this 注册页面<i>Content not supported</i></a> 注册</p>
+<div><p>Note</p>
+<p>如果你已注册，前往 <a href="https://www.addthis.com/login?next=/dashboard" target="_blank" rel="noopener noreferrer">Add this 登录页面<i>Content not supported</i></a> 登录账号。</p>
+</div>
+<h2 id="使用"> 使用</h2>
+<p>进入 <a href="https://www.addthis.com/dashboard#gallery/" target="_blank" rel="noopener noreferrer">工具页面<i>Content not supported</i></a> 添加你所需要的工具，并进行合理的配置。</p>
+<p>在配置完成后，请进入 <a href="https://www.addthis.com/dashboard#get-the-code/" target="_blank" rel="noopener noreferrer">获取代码页面<i>Content not supported</i></a>，即可代码中获得你的 pubid。</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

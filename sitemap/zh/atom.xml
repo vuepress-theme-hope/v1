@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/</id>
+  <title>Sitemap 生成器</title>
+  <subtitle>为你的站点生成 Sitemap</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-06-06T17:22:42.639Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope-v1.netlify.app/sitemap/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+  <contributor>
+    <name>Mr.Hope</name>
+  </contributor>
+  <entry>
+    <title type="html">选项</title>
+    <id>https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/config.html</id>
+    <link href="https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/config.html"/>
+    <updated>2022-06-02T17:33:28.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="插件选项"> 插件选项</h2>
+<h3 id="hostname"> hostname</h3>
+<ul>
+<li>类型: <code>string</code></li>
+<li>必填: 是</li>
+</ul>
+<p>当前网站部署到的域名，插件需要此选项才能工作。</p>
+<h3 id="extraurls"> extraUrls</h3>
+<ul>
+<li>类型: <code>string[]</code></li>
+<li>必填: 否</li>
+</ul>
+<p>需要额外包含的网址。</p>
+<p>如果你有一些不包含在 VuePress 路由中的链接 (如: 存放在 public 文件夹下的页面或其他插件或工具直接生成的页面)，你可能需要设置此项。</p>
+<p>例如: <code>['/about.html', '/api/']</code></p>
+<h3 id="excludeurls"> excludeUrls</h3>
+<ul>
+<li>类型: <code>string[]</code></li>
+<li>默认值: <code>['/404.html']</code></li>
+</ul>
+<p>不需要收录的页面路径，请以绝对路径开头。</p>
+<p>默认情况下 VuePress 自动生成的所有路径 (除 404 页) 都会被添加进 Sitemap。</p>
+<h3 id="sitemapfilename"> sitemapFilename</h3>
+<ul>
+<li>类型: <code>string</code></li>
+<li>默认值: <code>&quot;sitemap.xml&quot;</code></li>
+</ul>
+<p>输出的文件名，相对于输出目录。</p>
+<h3 id="changefreq"> changefreq</h3>
+<ul>
+<li>类型: <code>&quot;always&quot; | &quot;hourly&quot; | &quot;daily&quot; | &quot;weekly&quot; | &quot;monthly&quot; | &quot;yearly&quot; | &quot;never&quot;</code></li>
+<li>默认值: <code>&quot;daily&quot;</code></li>
+</ul>
+<p>页面默认更新频率，会被 Frontmatter 中的  选项覆盖。</p>
+<h3 id="priority"> priority</h3>
+<ul>
+<li>
+<p>类型: <code>number</code></p>
+</li>
+<li>
+<p>默认值: <code>0.5</code></p>
+</li>
+</ul>
+<p>页面优先级，范围 <code>0</code> 至 <code>1</code>。</p>
+<h3 id="modifytimegetter"> modifyTimeGetter</h3>
+<ul>
+<li>类型: <code>(page: Page) =&gt; string</code></li>
+<li>必填: 否</li>
+</ul>
+<p>最后修改事件的获得器，需要返回一个 ISO 字符形式的时间，默认会自动通过 Git 插件生成。</p>
+<h2 id="frontmatter-选项"> Frontmatter 选项</h2>
+<h3 id="sitemap-changefreq"> sitemap.changefreq</h3>
+<ul>
+<li>类型: <code>&quot;always&quot; | &quot;hourly&quot; | &quot;daily&quot; | &quot;weekly&quot; | &quot;monthly&quot; | &quot;yearly&quot; | &quot;never&quot;</code></li>
+<li>默认值: <code>&quot;daily&quot;</code></li>
+</ul>
+<p>页面默认更新频率。它会覆盖插件选项中的  选项。</p>
+<h3 id="sitemap-exclude"> sitemap.exclude</h3>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认值: <code>false</code></li>
+</ul>
+<p>是否不输出此页面到 Sitemap</p>
+<h3 id="sitemap-priority"> sitemap.priority</h3>
+<ul>
+<li>类型: <code>number</code></li>
+<li>默认值: <code>0.5</code></li>
+</ul>
+<p>页面优先级，范围 <code>0</code> 至 <code>1</code>。</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2021-02-28T16:19:11.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+  <entry>
+    <title type="html">指南</title>
+    <id>https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/guide.html</id>
+    <link href="https://vuepress-theme-hope-v1.netlify.app/sitemap/zh/guide.html"/>
+    <updated>2022-06-02T17:33:28.000Z</updated>
+    <content type="html"><![CDATA[<p>本插件会为你的网站自动生成 Sitemap。为了使插件正常工作，你需要将部署的域名传递给插件的 <code>hostname</code> 选项。</p>
+<p>插件会自动根据页面的 Git 的时间戳生成页面的最后更新时间，同时会根据站点的多语言配置声明页面的其他语言版本替代地址。</p>
+<h2 id="控制-sitemap-链接"> 控制 Sitemap 链接</h2>
+<p>默认情况下，所有除 404 页面以外的网站链接均会被添加进 Sitemap。</p>
+<p>如果你希望在 VuePress 项目页面之外，添加其他页面链接到 Sitemap，请将它们变成数组传入插件的 <code>extraUrls</code> 选项。</p>
+<p>如果你需要排除一些链接，你可以将它们变成数组传入到插件的 <code>excludeUrls</code> 选项。你也可以在对应页面的 frontmatter 中，设置 <code>sitemap.exclude</code> 为 <code>true</code>。</p>
+<h2 id="输出位置"> 输出位置</h2>
+<p>你还可以通过插件的 <code>sitemapFilename</code> 选项控制输出的地址，此地址相对于输出目录，默认为 <code>sitemap.xml</code>。</p>
+<h2 id="更新周期"> 更新周期</h2>
+<p>页面默认的更新周期是 <code>daily</code> (每天)，如果你希望修改全部的页面周期，请在插件选项中设置 <code>changefreq</code> 。你也可以在页面的 frontmatter 中设置 <code>sitemap.changefreq</code>，页面具有更高的优先级。</p>
+<p>合法的频率有:</p>
+<ul>
+<li><code>&quot;always&quot;</code></li>
+<li><code>&quot;hourly&quot;</code></li>
+<li><code>&quot;daily&quot;</code></li>
+<li><code>&quot;weekly&quot;</code></li>
+<li><code>&quot;monthly&quot;</code></li>
+<li><code>&quot;yearly&quot;</code></li>
+<li><code>&quot;never&quot;</code></li>
+</ul>
+<h2 id="优先级"> 优先级</h2>
+<p>你可以在插件中设置 <code>priority</code> 以提供一个默认值。同时你可以通过 fontmatter 中的 <code>sitemap.priority</code> 来为每个页面设置优先级。可接受的值为 <code>0</code> 到 <code>1</code> 的浮点数。</p>
+<h2 id="修改时间获取"> 修改时间获取</h2>
+<p>你可以通过插件的 <code>modifyTimeGetter</code> 来返回一个 ISO 字符串格式的时间，默认会通过 Git 插件生成。</p>
+<p>以下是一个基于文件最后修改时间的例子。</p>
+<div><pre><code><span>// 基于文件最后修改时间</span>
+<span>(</span><span>{</span>
+  <span>modifyTimeGetter</span><span>:</span> <span>(</span>page<span>)</span> <span>=></span>
+    fs<span>.</span><span>statSync</span><span>(</span>app<span>.</span>dir<span>.</span><span>source</span><span>(</span>page<span>.</span>filePathRelative<span>)</span><span>)</span><span>.</span>mtime<span>.</span><span>toISOString</span><span>(</span><span>)</span><span>;</span>
+<span>}</span><span>)</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="sitemap-介绍"> Sitemap 介绍</h2>
+<p>网站地图 (Sitemap) 提供搜索引擎优化 (SEO):</p>
+<ul>
+<li>为搜索引擎爬虫提供可以浏览整个网站的链接；</li>
+<li>为搜索引擎爬虫提供一些链接，指向动态页面或者采用其他方法比较难以到达的页面；</li>
+<li>如果访问者试图访问网站所在域内并不存在的 URL，那么这个访问者就会被转到“无法找到文件”的错误页面，而网站地图可以作为导航页。</li>
+</ul>
+<p>网站地图通过使所有页面可被找到来增强搜索引擎优化的效果。</p>
+<p>大部分搜索引擎只跟踪页面内有限数量的链接，因此当网站非常大的时候，网站地图对于使搜索引擎和访问者可以访问网站中的所有内容就变得必不可少了。</p>
+<p>Sitemaps 是站点管理员向搜索引擎爬虫公布站点可被抓取页面的协议，sitemap 文件内容必须遵循 XML 格式的定义。每个 URL 可以包含更新的周期和时间、URL 在整个站点中的优先级。这样可以让搜索引擎更佳有效的抓取网站内容。</p>
+<div><p>同步配置 robots.txt</p>
+<p>由于 Sitemap 面向搜索引擎，配合此插件使用时，你最好保证你在 <code>.vuepress/public</code> 文件夹下放置了有效的 <code>robot.txt</code>，以允许搜索引擎收录。一个最简单的 robots.txt 如下 (允许所有搜索引擎访问所有路径)</p>
+<div><pre><code>User-agent: *
+
+Allow: /
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br></div></div></div>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2021-02-28T16:19:11.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+</feed>

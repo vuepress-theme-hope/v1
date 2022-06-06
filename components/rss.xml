@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope-v1.netlify.app/components/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Components Lib</title>
+    <link>https://vuepress-theme-hope-v1.netlify.app/components/</link>
+    <description>Components Lib plugin for VuePress</description>
+    <language>en-US</language>
+    <pubDate>Mon, 06 Jun 2022 17:22:46 GMT</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2022 17:22:46 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>Plugin Options</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/components/config/</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/components/config/</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/components/rss.xml">Plugin Options</source>
+      <pubDate>Wed, 01 Jun 2022 12:28:53 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="backtotop"> backToTop</h2>
+<ul>
+<li>Type: <code>boolean | number</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether enabling backToTop button. When setting a number, it will be used as BackToTop button threshold distance (in pixels), default is 300.</p>
+<h2 id="breadcrumb"> breadcrumb</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether register breadcrumb component</p>
+<h2 id="badge"> badge</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether register badge component</p>
+<h2 id="pageinfo"> pageinfo</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether register pageinfo component</p>
+<h2 id="pagination"> pagination</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether register pagination component</p>
+<h2 id="wordperminute"> wordPerminute</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>300</code></li>
+</ul>
+<p>Reading words per minute.</p>
+<h2 id="screenfull"> screenFull</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether register scrennfull button component</p>
+<h2 id="locales"> locales</h2>
+<div><pre><code><span>interface</span> <span>ComponentLocaleData</span> <span>{</span>
+  <span>/**
+   * Back to top button label text
+   */</span>
+  backToTop<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Open in new window text
+   */</span>
+  openInNewWindow<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>Component locales config.</p>
+<h2 id="pageinfolocales"> pageInfoLocales</h2>
+<div><pre><code><span>interface</span> <span>PageInfoLocaleData</span> <span>{</span>
+  <span>/**
+   * Author label text
+   */</span>
+  author<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Writing date label text
+   */</span>
+  date<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Label text marked as original
+   */</span>
+  origin<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Page views label text
+   */</span>
+  views<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Tag label text
+   */</span>
+  tag<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Category label text
+   */</span>
+  category<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Expect reading time label text
+   */</span>
+  readingTime<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Words label Text
+   */</span>
+  words<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div><p>Locales Config for page information.</p>
+<h2 id="paginationlocales"> paginationLocales</h2>
+<div><pre><code><span>interface</span> <span>PaginationLocaleData</span> <span>{</span>
+  <span>/**
+   * Previous page button label text
+   */</span>
+  prev<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Next page button label text
+   */</span>
+  next<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Navigation hint label text
+   */</span>
+  navigate<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Navigation button label text
+   */</span>
+  button<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Error text when invalid page number, `$page` will be replaced by total page number automatically
+   */</span>
+  errorText<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br></div></div><p>Pagination locales config.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/components/guide/</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/components/guide/</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/components/rss.xml">Guide</source>
+      <pubDate>Wed, 01 Jun 2022 12:28:53 GMT</pubDate>
+      <content:encoded><![CDATA[<p>This plugin register 7 components and 1 global component:</p>
+<ul>
+<li><code>&lt;BackToTop /&gt;</code> (Global Components)</li>
+<li><code>&lt;Badge /&gt;</code></li>
+<li><code>&lt;BreadCrumb /&gt;</code></li>
+<li><code>&lt;CodeGroup /&gt;</code></li>
+<li><code>&lt;CodeGroupItem /&gt;</code></li>
+<li><code>&lt;Pagination /&gt;</code></li>
+<li><code>&lt;PageInfo /&gt;</code></li>
+<li><code>&lt;ScreenFull /&gt;</code></li>
+</ul>
+<h2 id="backtotop"> BackToTop</h2>
+<p>Back-to-top Button</p>
+<h2 id="breadcrumb"> BreadCrumb</h2>
+<h3 id="props"> Props</h3>
+<ul>
+<li><code>show</code>: Whether display globally</li>
+<li><code>icon</code>: Whether display icon</li>
+<li><code>iconPrefix</code>: icon class prefix</li>
+</ul>
+<h2 id="badge"> Badge</h2>
+<p>A badge which allows you to diy it’s color.</p>
+<h2 id="codegroup-codegroupitem"> CodeGroup, CodeGroupItem</h2>
+<p>Code Group</p>
+<p>Demo:</p>
+<div><pre><code>:::: code-group
+
+::: code-group-item yarn
+
+<span><span>```</span><span>bash</span>
+<span><span>yarn</span> <span>add</span> -D vuepress-theme-hope</span>
+<span>```</span></span>
+
+:::
+
+::: code-group-item npm
+
+<span><span>```</span><span>bash</span>
+<span><span>npm</span> i -D vuepress-theme-hope</span>
+<span>```</span></span>
+
+:::
+
+::::
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h2 id="pageinfo"> PageInfo</h2>
+<p>Page information components, see <a href="./page-info.html">PageInfo</a> for details.</p>
+<h2 id="pagination"> Pagination</h2>
+<p>Paging component.</p>
+<h3 id="props-2"> Props</h3>
+<ul>
+<li><code>currentPage</code>: v-model variable, current page.</li>
+<li><code>total</code>: total number of items</li>
+<li><code>perPage</code>: number of items per page, default is 10</li>
+</ul>
+<h2 id="screenfull"> ScreenFull</h2>
+<p>A full-screen button</p>
+<h3 id="props-3"> Props</h3>
+<ul>
+<li>enable: Whether enable this component</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Page information</title>
+      <link>https://vuepress-theme-hope-v1.netlify.app/components/guide/page-info.html</link>
+      <guid>https://vuepress-theme-hope-v1.netlify.app/components/guide/page-info.html</guid>
+      <source url="https://vuepress-theme-hope-v1.netlify.app/components/rss.xml">Page information</source>
+      <pubDate>Fri, 21 Jan 2022 13:17:30 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="props"> Props</h2>
+<div><pre><code><span>interface</span> <span>PageInfoProps</span> <span>{</span>
+  <span>/**
+   * Default author
+   */</span>
+  defaultAuthor<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Page Info display configuration
+   *
+   * @default ['author', 'visitor', 'time', 'category', 'tag', 'reading-time']
+   */</span>
+  items<span>?</span><span>:</span> PageInfo<span>[</span><span>]</span> <span>|</span> <span>false</span><span>;</span>
+
+  <span>/**
+   * Path to navigate when clicking category label
+   *
+   * `$category` will be automatically replaced by currect category name
+   */</span>
+  categoryPath<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Path to navigate when clicking tag label
+   *
+   * `$tag` will be automatically replaced by currect tag name
+   */</span>
+  tagPath<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Whether display icon besides title
+   *
+   * @default false
+   */</span>
+
+  titleIcon<span>?</span><span>:</span> <span>boolean</span><span>;</span>
+
+  <span>/**
+   * Title icon prefix
+   */</span>
+  titleIconPrefix<span>?</span><span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br></div></div><h3 id="items"> items</h3>
+<p><code>pageInfo</code> accepts an array of strings, which you should fill in a group of items. The order of you fill is the order in which the items are displayed.</p>
+<p>The available values and related page information are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>PageInfo</th>
+<th>Related Fontmatter property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'author'</code></td>
+<td>author</td>
+<td><code>author</code></td>
+</tr>
+<tr>
+<td><code>'time'</code></td>
+<td>Writing Date</td>
+<td><code>time</code></td>
+</tr>
+<tr>
+<td><code>'category'</code></td>
+<td>Category</td>
+<td><code>category</code></td>
+</tr>
+<tr>
+<td><code>'tag'</code></td>
+<td>tags</td>
+<td><code>tags</code></td>
+</tr>
+<tr>
+<td><code>'reading-time'</code></td>
+<td>Estimated reading time</td>
+<td>N / A (automatically generated)</td>
+</tr>
+<tr>
+<td><code>'word'</code></td>
+<td>Word count</td>
+<td>N / A (automatically generated)</td>
+</tr>
+<tr>
+<td><code>'visitor'</code></td>
+<td>Pageviews</td>
+<td><code>visitor</code> (Vssue does not support)</td>
+</tr>
+</tbody>
+</table>
+<p>By default it will display &quot;Author, Visit Number, Writing Date, Category, Tags, Expect Reading Time&quot;.</p>
+<div><p>Other notes</p>
+<ul>
+<li>
+<p><strong>author</strong></p>
+<p>You can configure <code>author</code> in the plugin options to set the default author. And you can also configure <code>author</code> in frontmatter with a new value in the page to override the default author, or set it to <code>false</code> to cancel the author display.</p>
+</li>
+<li>
+<p><strong>time</strong></p>
+<p>We recommend filling in a standard date format. A standard format is in the form of <code>xxxx-xx-xx</code>. (E.g.: &quot;April 1, 2020&quot; should be written as <code>2020-04-01</code>).</p>
+</li>
+<li>
+<p><strong>reading time</strong></p>
+<p>By default, the reading speed is 300 words per minute. You can override it by setting <code>wordPerminute</code> in the plugin options.</p>
+</li>
+</ul>
+</div>
+<h2 id="enable-and-disable"> Enable and disable</h2>
+<p>The <code>&lt;PageInfo /&gt;</code> component is enabled globally by default. You can disable it by setting <code>pageInfo: false</code> in page frontmatter.</p>
+<p>To keep it globally disabled, please set <code>pageInfo</code> to <code>false</code> in the plugin options. Then you can set <code>pageInfo</code> in page frontmattaer to enable it locally.</p>
+<h2 id="original-marker"> Original Marker</h2>
+<p>You can set <code>original</code> to <code>true</code> in page frontmatter to add an original mark in page info.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://vuepress-theme-hope-v1.netlify.app/reading-time/</id>
+  <title>Reading Time Counter</title>
+  <subtitle>Expect reading time and word count statistics</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-06-06T17:22:06.358Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope-v1.netlify.app/reading-time/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope-v1.netlify.app/reading-time/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+</feed>

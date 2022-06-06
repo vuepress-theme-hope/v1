@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://vuepress-theme-hope-v1.netlify.app/add-this/</id>
+  <title>Share Plugin</title>
+  <subtitle>Share Plugin provided by AddThis</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-06-06T17:22:37.942Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope-v1.netlify.app/add-this/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope-v1.netlify.app/add-this/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+  <contributor>
+    <name>Mr.Hope</name>
+  </contributor>
+  <entry>
+    <title type="html">Options</title>
+    <id>https://vuepress-theme-hope-v1.netlify.app/add-this/config.html</id>
+    <link href="https://vuepress-theme-hope-v1.netlify.app/add-this/config.html"/>
+    <updated>2022-02-18T12:11:11.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="pubid"> pubid</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: Yes</li>
+</ul>
+<p>Pubid for Add this</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2020-10-13T05:36:44.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+  <entry>
+    <title type="html">Guide</title>
+    <id>https://vuepress-theme-hope-v1.netlify.app/add-this/guide.html</id>
+    <link href="https://vuepress-theme-hope-v1.netlify.app/add-this/guide.html"/>
+    <updated>2022-01-20T04:39:27.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="register"> Register</h2>
+<p>Go to <a href="https://www.addthis.com/register?next=/dashboard" target="_blank" rel="noopener noreferrer">AddThis registration page<i>Content not supported</i></a> to register.</p>
+<div><p>Note</p>
+<p>If you already registered, ahead to <a href="https://www.addthis.com/login?next=/dashboard" target="_blank" rel="noopener noreferrer">AddThis login page<i>Content not supported</i></a> to login.</p>
+</div>
+<h2 id="usage"> Usage</h2>
+<p>Go to <a href="https://www.addthis.com/dashboard#gallery/" target="_blank" rel="noopener noreferrer">Tools page<i>Content not supported</i></a> then add and configure tools which you need.</p>
+<p>After you finished, enter the <a href="https://www.addthis.com/dashboard#get-the-code/" target="_blank" rel="noopener noreferrer">Get The Code Page<i>Content not supported</i></a> to get your pubid from the code.</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2020-10-13T05:36:44.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+</feed>
