@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://vuepress-theme-hope.gitee.io/v1/pwa/</id>
+  <title>PWA Support</title>
+  <subtitle>A powerful PWA plugin for vuepress</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-06-06T17:24:32.775Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope.gitee.io/v1/pwa/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope.gitee.io/v1/pwa/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+  <contributor>
+    <name>Mr.Hope</name>
+  </contributor>
+  <entry>
+    <title type="html">Config</title>
+    <id>https://vuepress-theme-hope.gitee.io/v1/pwa/config.html</id>
+    <link href="https://vuepress-theme-hope.gitee.io/v1/pwa/config.html"/>
+    <updated>2022-06-02T17:21:23.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="showinstall"> showInstall</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>true</code></li>
+</ul>
+<p>Whether display install button when Service Worker is first registered successfully.</p>
+<h2 id="manifest"> manifest</h2>
+<ul>
+<li>Type: <code>ManifestOption</code></li>
+<li>Required: No</li>
+</ul>
+<p>You can fill with an object which will be parsed to manifest.webmanifest.</p>
+<div><p>Tips</p>
+<p>Some options have their fallback if you donot set them.</p>
+<ul>
+<li>
+<p>name: <code>siteConfig.title</code> || <code>siteConfig.locales['/'].title</code> || <code>&quot;Site&quot;</code></p>
+</li>
+<li>
+<p>short_name: <code>siteConfig.title</code> || <code>siteConfig.locales['/'].title</code> || <code>&quot;Site&quot;</code></p>
+</li>
+<li>
+<p>description: <code>siteConfig.description</code> || <code>siteConfig.locales['/'].description</code> || <code>&quot;A site built with vuepress&quot;</code></p>
+</li>
+<li>
+<p>lang: <code>siteConfig.locales['/'].lang</code> || <code>&quot;en-US&quot;</code></p>
+</li>
+<li>
+<p>start_url: <code>context.base</code></p>
+</li>
+<li>
+<p>scope: <code>context.base</code></p>
+</li>
+<li>
+<p>display: <code>&quot;standalone&quot;</code></p>
+</li>
+<li>
+<p>theme_color: <code>&quot;#46bd87&quot;</code></p>
+</li>
+<li>
+<p>background_color: <code>&quot;#ffffff&quot;</code></p>
+</li>
+<li>
+<p>orientation: <code>&quot;portrait-primary&quot;</code></p>
+</li>
+<li>
+<p>prefer_related_applications: <code>false</code></p>
+</li>
+</ul>
+</div>
+<div><p>More</p>
+<p>For docs of Manifest, please see <a href="https://w3c.github.io/manifest/" target="_blank" rel="noopener noreferrer">W3C Manifest<i>Content not supported</i></a></p>
+</div>
+<h2 id="favicon"> favicon</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: No</li>
+</ul>
+<p>Path of favico.ico with absolute path.</p>
+<div><p>Note</p>
+<p>We recommend you to set favicon for your site</p>
+</div>
+<h2 id="themecolor"> themeColor</h2>
+<ul>
+<li>类型: <code>string</code></li>
+<li>默认值: <code>&quot;#46bd87&quot;</code></li>
+</ul>
+<p>Theme Color, default is theme green</p>
+<h2 id="maxsize"> maxSize</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>2048</code></li>
+</ul>
+<p>Max size which allows to cache, with KB unit</p>
+<div><p>Note</p>
+<p>This option has the highest priority, and any files exceeding this value will be excluded.</p>
+<p>So if you generate very large HTML or JS files, please consider increasing this value, otherwise your PWA may not work normally in offline mode.</p>
+</div>
+<h2 id="cachehtml"> cacheHTML</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether cache HTML files besides home page and 404 page.</p>
+<h2 id="cachepic"> cachePic</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether cache pictures</p>
+<h2 id="maxpicsize"> maxPicSize</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>1024</code></li>
+</ul>
+<p>Max picture size which allows to cache, with KB unit</p>
+<h2 id="update"> update</h2>
+<ul>
+<li>Type: <code>&quot;disabled&quot; | &quot;available&quot; | &quot;hint&quot; | &quot;force&quot;</code></li>
+<li>Default: <code>&quot;available&quot;</code></li>
+</ul>
+<p>Control logic when new content is found.</p>
+<ul>
+<li>
+<p><code>&quot;disabled&quot;</code>: Do nothing even when new service worker is available. After new service work succeeds installing and starts waiting, it will control page and provide new content in next visit.</p>
+</li>
+<li>
+<p><code>&quot;available&quot;</code>: Only display update popup when the new service worker is available</p>
+</li>
+<li>
+<p><code>&quot;hint&quot;</code>: Display a hint to let user choose to refresh immediately</p>
+<p>This is helpful when you want users to see new docs immediately.</p>
+<div><p>Note</p>
+<p>If users choose to refresh, the current service worker will be unregister, and request will start coming to web. Later the new service worker will start installing and control current page after installed.</p>
+</div>
+</li>
+<li>
+<p><code>&quot;force&quot;</code>: unregister current service worker immediately then refresh to get new content</p>
+<div><p>Warning</p>
+<p>Although this ensure users are viewing the latest content, it may affect viewing experiences.</p>
+</div>
+</li>
+</ul>
+<div><p>Note</p>
+<p>How docs are updated is controlled by a previous version, so the current option only effect next update from this version.</p>
+</div>
+<h2 id="apple"> apple</h2>
+<p>Special settings for Apple</p>
+<blockquote>
+<p>If you don’t want to make detailed settings, you can safely ignore it; if you don’t want your site compatible with safari on apple, please set it to <code>false</code>.</p>
+</blockquote>
+<h3 id="apple-icon"> apple.icon</h3>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: No</li>
+</ul>
+<p>Fill in the icon address used by Apple, the recommended size is 152×152</p>
+<h3 id="apple-statusbarcolor"> apple.statusBarColor</h3>
+<ul>
+<li>Type: <code>&quot;black&quot; | &quot;white&quot;</code></li>
+<li>Default: <code>&quot;black&quot;</code></li>
+</ul>
+<p>Apple’s status bar color</p>
+<h3 id="apple-maskicon"> apple.maskIcon</h3>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: No</li>
+</ul>
+<p>Safari mask icon</p>
+<h2 id="mstile"> msTile</h2>
+<p>Special settings for Microsoft tiles</p>
+<blockquote>
+<p>If you don’t want to make detailed settings, you can safely ignore it; if you don’t want your site compatible with windows, please set it to <code>false</code>.</p>
+</blockquote>
+<h3 id="mstile-image"> msTile.image</h3>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: No</li>
+</ul>
+<p>Tile icon</p>
+<h3 id="mstile-color"> msTile.color</h3>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default value: <code>themeColor</code></li>
+</ul>
+<p>The tile color will automatically fall back to themeColor if you don’t set it.</p>
+<h2 id="hintcomponent"> hintComponent</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>&quot;SWHintPopup&quot;</code></li>
+</ul>
+<p>You can fill in the custom hint popup component path.</p>
+<h2 id="updatecomponent"> updateComponent</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>&quot;SWUpdatePopup&quot;</code></li>
+</ul>
+<p>You can fill in the custom update popup component path.</p>
+<h2 id="appendbase"> appendBase</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether append base to all absolute links.</p>
+<h2 id="generateswconfig"> generateSwConfig</h2>
+<p>Options passed to <code>workbox-build</code>, for details, see <a href="https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.generateSW" target="_blank" rel="noopener noreferrer">Workbox documentation<i>Content not supported</i></a></p>
+<h2 id="locales"> locales</h2>
+<ul>
+<li>
+<p>Type: <code>PWALocaleConfig</code></p>
+<div><pre><code><span>interface</span> <span>PWALocaleData</span> <span>{</span>
+  <span>/**
+   * Install button text
+   */</span>
+  install<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * iOS install hint text
+   */</span>
+  iOSInstall<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Cancel button text
+   */</span>
+  cancel<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Close button text
+   */</span>
+  close<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Previous image text
+   */</span>
+  prevImage<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Next image text
+   */</span>
+  nextImage<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Install explain text
+   */</span>
+  explain<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Description label text
+   */</span>
+  desc<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Feature label text
+   */</span>
+  feature<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Update hint text
+   */</span>
+  hint<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Update available text
+   */</span>
+  update<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+
+<span>interface</span> <span>PWALocaleConfig</span> <span>{</span>
+  <span>[</span>localePath<span>:</span> <span>string</span><span>]</span><span>:</span> PWALocaleData<span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br></div></div></li>
+<li>
+<p>Required: No</p>
+</li>
+</ul>
+<p>Locales config for pwa plugin.</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2020-10-22T04:23:17.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+  <entry>
+    <title type="html">Guide</title>
+    <id>https://vuepress-theme-hope.gitee.io/v1/pwa/guide.html</id>
+    <link href="https://vuepress-theme-hope.gitee.io/v1/pwa/guide.html"/>
+    <updated>2022-06-02T17:21:23.000Z</updated>
+    <summary type="html"><![CDATA[<p>The plugin brings enhanced PWA support to VuePress [^pwa-intro].</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>The plugin brings enhanced PWA support to VuePress <sup></sup>.</p>
+
+<h2 id="intro"> Intro</h2>
+<p>Service Worker <sup></sup> (SW for short) is mainly used to cache and proxy site content.</p>
+<p>This plugin will automatically register Service Worker through <code>workbox-build</code>. To better control what the Service Worker can pre-cache, the plugin provides the following configurations.</p>
+<div><p>Tips</p>
+<p>If you are an advanced user, you can also set <code>generateSwConfig</code> directly to pass options to <code>workbox-build</code>.</p>
+</div>
+<h2 id="cache-control"> Cache Control</h2>
+<p>Based on the requirement of installable <sup></sup>, the plugin provides related options for cache control.</p>
+<h3 id="default-cache"> Default cache</h3>
+<p>By default, the plugin will pre-cache all the <code>js</code> <code>css</code> and <code>svg</code>.And only homepage and 404 <code>html</code> are cached.</p>
+<p>At the same time, the plugin will cache font files: <code>**/*.{woff,woff2,eot,ttf,otf}</code>.</p>
+<h3 id="image-cache"> Image Cache</h3>
+<p>You can cache site pictures by setting the <code>cachePic</code> option to <code>true</code>.</p>
+<p>If your site is not large and the pictures are mostly critical descriptions, and hope to be displayed in offline mode, please set this option to <code>true</code>.</p>
+<div><p>Image recognition</p>
+<p>We recognize images by file extension. Any files ending with <code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.gif</code>, <code>.bmp</code>, <code>.webp</code> will be regarded as images.</p>
+</div>
+<h3 id="html-cache"> HTML Cache</h3>
+<p>If you have small sites, and would like to make docusment fully offline available, you can set <code>cacheHTML</code> to <code>true</code> to cache all HTML files.</p>
+<div><p>Why only home and 404 page been cached by default?</p>
+<p>Though VuePress generates HTML files through SSR<sup></sup> for all pages, these files are mainly used for SEO<sup></sup> and allow you to directly configure the backend without SPA<sup></sup> Visit any link.</p>
+<p>VuePress is essentially a SPA. This means that you only need to cache the home page and enter from the home page to access all pages normally. Therefore, not caching other HTML by default can effectively reduce the cache size (40% smaller in size) and speed up the SW update speed.</p>
+<p>But this also has the disadvantage. If the user enters the site directly from a non-home page, the HTML file for the first page still needs to be loaded from the internet. Also, in offline environment, users can only enter through the homepage and then navigate to the corresponding page by themselves. If they directly access a link, an inaccessible prompt will appear.</p>
+</div>
+<h3 id="size-control"> Size Control</h3>
+<p>To prevent large files from being included in the pre-cache list, any files larger than 2MB or pictures larger than 1MB will be deleted.</p>
+<p>You can customize the maximum file size of the cache (unit: KB) with the <code>maxSize</code> option, or change the size limit of the picture (unit: KB) with <code>maxPicSize</code>.</p>
+<h2 id="update-control"> Update Control</h2>
+<p>We provide the <code>update</code> option to control how users receive updates.</p>
+<p>The default value of the <code>update</code> option is <code>&quot;available&quot;</code>, which means that when new content available, the new SW will be installed silently in the background, and a pop-up window will prompt the user that the new content is ready after SW finish installing. Users can choose whether to refresh immediately to view new content.</p>
+<p>Under the default behavior, users will still read old content before the SW is ready and they will not be prompted. If your project is still in building stage and you want to alert the user that he may be reading outdated content, you can set this to <code>&quot;hint&quot;</code>. This allows users to be notified that new content has been published within seconds after visiting docs. But the negative effect of this is that if the user chooses to update before the new SW is ready, he will need to get all the resources of the page from the internet before the new SW installs and controls the page.</p>
+<p>If your docs are stable, or you’re hosting a blog and don’t care much about users receiving the latest version right away, you can set this to <code>&quot;disabled&quot;</code>, which means that the new SW will be installed completely silently in the background and start waiting, when the pages controlled by the old version SW are all closed, the new SW will start to take control and provide users with new content the next time users visit. This setting can prevent users from being disturbed by the pop-up window in the bottom right corner during the visit.</p>
+<p>To speed up user access under weak or no network conditions through SW, but also want users to always access new content, you can set this option to <code>&quot;force&quot;</code>. The behavior of this option is to unregister old SW as soon as a new SW is detected and refresh the page to ensure the user is browsing the latest content. But we strongly recommend not using this option unless necessary, as after a new SW is released, all users will experience unexpected sudden refresh within seconds after entering the site, and they will have to access the document over the internet and install the whole latest SW.</p>
+<h3 id="update-prompt-popup"> Update Prompt Popup</h3>
+<p>When new content is detected (new SW detected), an update prompt popup will appear in the bottom right corner and allow the user to refresh and apply.</p>
+<div><p>custom popup</p>
+<p>If you are not satisfied with the default popup, you can write your own component. You need to register your own popup component globally and pass the name of the component to the <code>hintComponent</code> option.</p>
+</div>
+<h3 id="update-ready-popup"> Update Ready Popup</h3>
+<p>When the new content is ready (the new SW installed successfully and started waiting), the update ready popup will appear in the bottom right corner and allow the user to refresh and apply.</p>
+<div><p>custom popup</p>
+<p>If you are not satisfied with the default popup, you can write your own component. You need to register your popup component globally and pass the name of the component to the <code>updateComponent</code> option.</p>
+</div>
+<h2 id="manifest-generation"> Manifest Generation</h2>
+<p>To ensure the installability of PWA, the site needs to generate a manifest file and declare a valid manifest file address <sup></sup> through <code>&lt;link&gt;</code>.</p>
+<p>The plugin will automatically generate the Manifest file <code>manifest.webmanifest</code> for you in the output directory, and will also add the manifest address statement to each HTML <code>&lt;head&gt;</code>.</p>
+<p>If you already have a <code>manifest.webmanifest</code> or <code>manifest.json</code> in <code>.vuepress/public</code>, the plugin will read and merge it into the final manifest.</p>
+<h3 id="automatic-generation"> Automatic Generation</h3>
+<p>The plugin will use the information from the VuePress plugin API and set the fallback for fields in manifest as much as possible. So you don’t need to set most of the manifest fields.</p>
+<p>If the following fields are not set, they will try to fallback to the following preset values in order.</p>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>siteConfig.title</code> || <code>siteConfig.locales['/'].title</code> || <code>&quot;Site&quot;</code></td>
+</tr>
+<tr>
+<td>short_name</td>
+<td><code>siteConfig.title</code> || <code>siteConfig.locales['/'].title</code> || <code>&quot;Site&quot;</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>siteConfig.description</code> || <code>siteConfig.locales['/'].description</code> || <code>&quot;A site built with vuepress&quot;</code></td>
+</tr>
+<tr>
+<td>lang</td>
+<td><code>siteConfig.locales['/'].lang</code> || <code>&quot;en-US&quot;</code></td>
+</tr>
+<tr>
+<td>start_url</td>
+<td><code>siteConfig.base</code></td>
+</tr>
+<tr>
+<td>scope</td>
+<td><code>siteConfig.base</code></td>
+</tr>
+<tr>
+<td>display</td>
+<td><code>&quot;standalone&quot;</code></td>
+</tr>
+<tr>
+<td>theme_color</td>
+<td><code>&quot;#46bd87&quot;</code></td>
+</tr>
+<tr>
+<td>background_color</td>
+<td><code>&quot;#ffffff&quot;</code></td>
+</tr>
+<tr>
+<td>orientation</td>
+<td><code>&quot;portrait-primary&quot;</code></td>
+</tr>
+<tr>
+<td>prefer_related_applications</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<p>For complete configuration items, please see <a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope-v1/blob/main/packages/pwa2/src/shared/manifest.d.ts" target="_blank" rel="noopener noreferrer">Manifest Type Definition File<i>Content not supported</i></a>.</p>
+<h3 id="manual-config"> Manual Config</h3>
+<p>You can manually specify the contents of the manifest in the <code>manifest</code> option.</p>
+<div><p>Priority</p>
+<p><code>manifest</code> option has the highest priority, followed by manifest files that may exist in the <code>public</code> directory.</p>
+</div>
+<p><strong>You should at least set a valid icon through <code>manifest.icons</code> or other icon related options in the PWA plugin.</strong></p>
+<div><p>Note</p>
+<p>The installability <sup></sup> specification requires at least one valid icon to be declared in the manifest.</p>
+<p>So if you do not configure <code>manifest.icons</code>, visitors can only enjoy the offline accessibility brought by the Service Worker cache, while cannot install your site as a PWA.</p>
+<p>Besides the plugin does not process anything in the manifest by default, but outputs them as-is. This means that if you plan to deploy to a subdirectory, you should append the URL prefix to manifest Urls yourself.</p>
+<p>If everything you need is all under <code>base</code> directory, you can set <code>appendBase: true</code> in plugin options to let the plugin append <code>base</code> to any links in manifest.</p>
+</div>
+<h2 id="other-options"> Other Options</h2>
+<p>The plugin also provides other PWA-related options, such as Microsoft tile icon and color settings, Apple icon and so on.</p>
+<p>You can set them as needed. For detailed options, please see <a href="./config.html">Configuration Page</a>.</p>
+<h2 id="further-reading"> Further Reading</h2>
+<p>For more details, please see:</p>
+<ul>
+<li><a href="https://web.dev/progressive-web-apps/" target="_blank" rel="noopener noreferrer">Google PWA<i>Content not supported</i></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" rel="noopener noreferrer">MDN PWA<i>Content not supported</i></a></li>
+<li><a href="https://w3c.github.io/manifest/" target="_blank" rel="noopener noreferrer">W3C Manifest Specification<i>Content not supported</i></a></li>
+</ul>
+<hr>
+<section>
+<ol>
+<li id="footnote1"><p><strong>PWA introduction</strong></p>
+<p>PWA, full name Progressive Web app. PWA standard is stipulated by W3C.</p>
+<p>It allows sites to install the site as an App on supported platform through a browser that supports this feature. </p>
+</li>
+<li id="footnote2"><p><strong>Service Worker Introduction</strong></p>
+<ol>
+<li>
+<p>The Service Worker will get and cache all the files registered in it during the registration process.</p>
+</li>
+<li>
+<p>After the registration complete, the Service Worker is activated, and starts to proxy and control all your requests.</p>
+</li>
+<li>
+<p>Whenever you want to initiate an access request through the browser, the Service Worker will check whether it exists in its own cache list, if it exists, it will directly return the cached result, otherwise it will call its own fetch method to get it. You can use a custom fetch method to fully control the result of the request for resources in the web page, such as providing a fallback web page when offline.</p>
+</li>
+<li>
+<p>Every time the user reopens the site, the Service Worker will request to the link when it was registered. If a new version of Service Worker is detected, it will update itself and start caching the list of resources registered in the new Service Worker . After the content update is successfully obtained, the Service Worker will trigger the <code>update</code> event. The user can be notified through this event, for example, a pop-up window will be displayed in the lower right corner, prompting the user that new content is available and allowing the user to trigger an update.</p>
+</li>
+</ol>
+ </li>
+<li id="footnote3"><p><strong>Installable</strong></p>
+<p>To let the site be registered as a PWA, the site needs to successfully register a valid service worker by itself, and at the same time add a valid manifest file and declare it.</p>
+<p>Each platform or browser has requirements for the size of the Service Worker cache. When the file size of the Service Worker cache is too large, the site will be marked as not installable. For Safari, the threshold is 50 MB, a few browsers will set less or more values (30MB, 70MB, 80MB), and Chrome will mark the threshold at 100 MB.</p>
+<p>The manifest file should contain at least <code>name</code> (or <code>short_name</code>) <code>icons</code> <code>start_url</code></p>
+<div><p>Note</p>
+<p>Starting from Chrome 93, Service Worker must contain effective fetch events to control offline requests.</p>
+<p>However, currently the plugin does not contain relevant processing logic by default, so on Android devices with Chrome 93 or later, the site will not pop up an installation prompt.</p>
+</div>
+  </li>
+<li id="footnote4"><p><strong>SSR</strong>: <strong>S</strong>erver <strong>S</strong>ide <strong>R</strong>endering, </p>
+</li>
+<li id="footnote5"><p><strong>SEO</strong>: <strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization. </p>
+</li>
+<li id="footnote6"><p><strong>SPA</strong>: <strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplication, most of them only have the homepage, and use history mode to handle routing instead of actually navigating between pages. </p>
+</li>
+<li id="footnote7"><p><strong>Manifest File</strong></p>
+<p>The manifest file uses the JSON format and is responsible for declaring various information of the PWA, such as name, description, icon, and shortcut actions.</p>
+<p>In order for your site to be registered as a PWA, you need to meet the basic specifications of the manifest to make the browser consider the site as an installable PWA and allow users to install it.</p>
+<div><p>Info</p>
+<p>For Manifest standards and specifications, please see <a href="https://w3c.github.io/manifest/" target="_blank" rel="noopener noreferrer">W3C Manifest<i>Content not supported</i></a></p>
+</div>
+ </li>
+</ol>
+</section>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2020-10-22T04:23:17.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+</feed>

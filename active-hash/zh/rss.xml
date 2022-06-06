@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.gitee.io/v1/active-hash/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Hash 激活插件</title>
+    <link>https://vuepress-theme-hope.gitee.io/v1/active-hash/zh/</link>
+    <description>自动激活对应 Hash</description>
+    <language>zh-CN</language>
+    <pubDate>Mon, 06 Jun 2022 17:24:17 GMT</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2022 17:24:17 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+  </channel>
+</rss>
