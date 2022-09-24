@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://vuepress-theme-hope.github.io/v1/components/zh/</id>
+  <title>组件库</title>
+  <subtitle>VuePress 的组件库插件</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-09-24T09:28:10.561Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope.github.io/v1/components/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope.github.io/v1/components/zh/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+  <contributor>
+    <name>Mr.Hope</name>
+  </contributor>
+  <entry>
+    <title type="html">插件选项</title>
+    <id>https://vuepress-theme-hope.github.io/v1/components/zh/config/</id>
+    <link href="https://vuepress-theme-hope.github.io/v1/components/zh/config/"/>
+    <updated>2022-06-05T07:09:13.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="backtotop"> backToTop</h2>
+<ul>
+<li>类型: <code>boolean | number</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否启用返回顶部按钮，当设置为数字时，会被作为返回顶部按钮触发距离 (单位: 像素)，默认为 300。</p>
+<h2 id="breadcrumb"> breadcrumb</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否注册路径导航</p>
+<h2 id="badge"> badge</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否注册徽章</p>
+<h2 id="pageinfo"> pageinfo</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否注册页面信息组件</p>
+<h2 id="pagination"> pagination</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否注册分页组件</p>
+<h2 id="screenfull"> screenFull</h2>
+<ul>
+<li>类型: <code>boolean</code></li>
+<li>默认: <code>false</code></li>
+</ul>
+<p>是否注册全屏按钮</p>
+<h2 id="wordperminute"> wordPerminute</h2>
+<ul>
+<li>类型: <code>number</code></li>
+<li>默认: <code>300</code></li>
+</ul>
+<p>每分钟阅读的字数。</p>
+<h2 id="locales"> locales</h2>
+<div><pre><code><span>interface</span> <span>ComponentLocaleData</span> <span>{</span>
+  <span>/**
+   * 返回顶部文字
+   */</span>
+  backToTop<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 在新窗口中打开
+   */</span>
+  openInNewWindow<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>组件国际化配置</p>
+<h2 id="pageinfolocales"> pageInfoLocales</h2>
+<div><pre><code><span>interface</span> <span>PageInfoLocaleData</span> <span>{</span>
+  <span>/**
+   * 作者文字
+   */</span>
+  author<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 写作日期文字
+   */</span>
+  date<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 标记原创的文字
+   */</span>
+  origin<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 访问量文字
+   */</span>
+  views<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 标签文字
+   */</span>
+  tag<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 分类文字
+   */</span>
+  category<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 期望阅读时间文字
+   */</span>
+  readingTime<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 文章字数
+   */</span>
+  words<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br></div></div><p>页面信息的国际化配置。</p>
+<h2 id="paginationlocales"> paginationLocales</h2>
+<div><pre><code><span>interface</span> <span>PaginationLocaleData</span> <span>{</span>
+  <span>/**
+   * 上一页文字
+   */</span>
+  prev<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 下一页文字
+   */</span>
+  next<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 跳转提示文字
+   */</span>
+  navigate<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 跳转按钮文字
+   */</span>
+  button<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 页码错误文字，其中 `$page` 会自动替换为当前的总页数
+   */</span>
+  errorText<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br></div></div><p>分页的国际化配置</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2022-06-01T12:28:53.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+  <entry>
+    <title type="html">指南</title>
+    <id>https://vuepress-theme-hope.github.io/v1/components/zh/guide/</id>
+    <link href="https://vuepress-theme-hope.github.io/v1/components/zh/guide/"/>
+    <updated>2022-06-01T12:28:53.000Z</updated>
+    <content type="html"><![CDATA[<p>此插件注册 7 个组件和一个全局组件:</p>
+<ul>
+<li><code>&lt;BackToTop /&gt;</code> (全局组件)</li>
+<li><code>&lt;Badge /&gt;</code></li>
+<li><code>&lt;BreadCrumb /&gt;</code></li>
+<li><code>&lt;CodeGroup /&gt;</code></li>
+<li><code>&lt;CodeGroupItem /&gt;</code></li>
+<li><code>&lt;Pagination /&gt;</code></li>
+<li><code>&lt;PageInfo /&gt;</code></li>
+<li><code>&lt;ScreenFull /&gt;</code></li>
+</ul>
+<h2 id="backtotop"> <code>&lt;BackToTop /&gt;</code></h2>
+<p>返回顶部按钮</p>
+<h2 id="breadcrumb"> <code>&lt;BreadCrumb /&gt;</code></h2>
+<h3 id="属性"> 属性</h3>
+<ul>
+<li><code>show</code>: 是否全局显示</li>
+<li><code>icon</code>: 是否显示图标</li>
+<li><code>iconPrefix</code>: 图标前缀</li>
+</ul>
+<h2 id="badge"> <code>&lt;Badge /&gt;</code></h2>
+<p>支持自定义颜色的徽章</p>
+<h2 id="codegroup-codegroupitem"> <code>&lt;CodeGroup /&gt;</code>, <code>&lt;CodeGroupItem /&gt;</code></h2>
+<p>代码块分组。</p>
+<p>案例:</p>
+<div><pre><code>:::: code-group
+
+::: code-group-item yarn
+
+<span><span>```</span><span>bash</span>
+<span><span>yarn</span> <span>add</span> -D vuepress-theme-hope</span>
+<span>```</span></span>
+
+:::
+
+::: code-group-item npm
+
+<span><span>```</span><span>bash</span>
+<span><span>npm</span> i -D vuepress-theme-hope</span>
+<span>```</span></span>
+
+:::
+
+::::
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br></div></div><h2 id="pageinfo"> <code>&lt;PageInfo /&gt;</code></h2>
+<p>页面信息组件，详见 <a href="./page-info.html">页面信息</a>。</p>
+<h2 id="pagination"> <code>&lt;Pagination /&gt;</code></h2>
+<p>分页组件。</p>
+<h3 id="属性-2"> 属性</h3>
+<ul>
+<li><code>currentPage</code>: V-model 双向绑定，当前为第几个页面。</li>
+<li><code>total</code>: 总项数</li>
+<li><code>perPage</code>: 每页包含的项目数，默认为 10</li>
+</ul>
+<h2 id="screenfull"> <code>&lt;ScreenFull /&gt;</code></h2>
+<p>全屏按钮组件</p>
+<h3 id="属性-3"> 属性</h3>
+<ul>
+<li><code>enable</code>: 是否启用此组件</li>
+</ul>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2022-06-01T12:28:53.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+  <entry>
+    <title type="html">页面信息</title>
+    <id>https://vuepress-theme-hope.github.io/v1/components/zh/guide/page-info.html</id>
+    <link href="https://vuepress-theme-hope.github.io/v1/components/zh/guide/page-info.html"/>
+    <updated>2022-01-21T13:17:30.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="props"> Props</h2>
+<div><pre><code><span>interface</span> <span>PageInfoProps</span> <span>{</span>
+  <span>/**
+   * 默认作者
+   */</span>
+  defaultAuthor<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 文章信息配置
+   *
+   * @default ['author', 'visitor', 'time', 'category', 'tag', 'reading-time']
+   */</span>
+  items<span>?</span><span>:</span> PageInfo<span>[</span><span>]</span> <span>|</span> <span>false</span><span>;</span>
+
+  <span>/**
+   * 点击分类标签时跳转的路径。
+   *
+   * 其中 `$category` 会被自动替换为当前分类名称
+   */</span>
+  categoryPath<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 点击标签跳转的路径。
+   *
+   * 其中 `$tag` 会被自动替换为当前分类名称
+   */</span>
+  tagPath<span>?</span><span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * 是否在标题旁显示图标
+   *
+   * @default false
+   */</span>
+
+  titleIcon<span>?</span><span>:</span> <span>boolean</span><span>;</span>
+
+  <span>/**
+   * 标题图标 class 前缀
+   */</span>
+  titleIconPrefix<span>?</span><span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br></div></div><h3 id="items"> items</h3>
+<p><code>pageInfo</code> 接受一个字符串数组，填入所展示的页面信息名称，填入的顺序即是各信息显示的顺序。</p>
+<p>页面信息可选值和对应信息如下:</p>
+<table>
+<thead>
+<tr>
+<th>可选值</th>
+<th>对应信息</th>
+<th>页面 frontmatter 属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'author'</code></td>
+<td>作者</td>
+<td><code>author</code></td>
+</tr>
+<tr>
+<td><code>'time'</code></td>
+<td>写作日期</td>
+<td><code>time</code></td>
+</tr>
+<tr>
+<td><code>'category'</code></td>
+<td>分类</td>
+<td><code>category</code></td>
+</tr>
+<tr>
+<td><code>'tag'</code></td>
+<td>标签</td>
+<td><code>tag</code></td>
+</tr>
+<tr>
+<td><code>'reading-time'</code></td>
+<td>预计阅读时间</td>
+<td>N/A (自动生成)</td>
+</tr>
+<tr>
+<td><code>'word'</code></td>
+<td>字数</td>
+<td>N/A (自动生成)</td>
+</tr>
+<tr>
+<td><code>'visitor'</code></td>
+<td>访问量</td>
+<td><code>visitor</code> (仅 Valine 可用)</td>
+</tr>
+</tbody>
+</table>
+<p>默认会显示 “作者，访问量，写作日期，分类，标签，预计阅读时间”。</p>
+<div><p>其他说明</p>
+<ul>
+<li>
+<p><strong>author</strong></p>
+<p>你可以通过插件选项中的 <code>author</code> 来设置默认作者，同样，你仍可以在页面 frontmatter 设置 <code>author</code> 来覆盖默认作者，或者设置为 <code>false</code> 以取消该页面的作者显示。</p>
+</li>
+<li>
+<p><strong>time</strong></p>
+<p>建议以标准格式输入日期，即 <code>xxxx-xx-xx</code> 的形式。(例: “2020 年 4 月 1 日” 应输入为 <code>2020-04-01</code>)</p>
+</li>
+<li>
+<p><strong>reading-time</strong></p>
+<p>默认的阅读速度是每分钟 300 字，你可以在插件选项中设置 <code>wordPerminute</code> 来覆盖它。</p>
+</li>
+</ul>
+</div>
+<h2 id="启用与禁用"> 启用与禁用</h2>
+<p><code>&lt;PageInfo /&gt;</code> 组件默认全局启用。你可以在页面的 frontmatter 中设置 <code>pageInfo: false</code> 来局部禁用它。</p>
+<p>如果你需要保持全局禁用，请在插件选项中设置 <code>pageInfo</code> 为 <code>false</code>。这样你可以在页面 frontmatter 中设置 <code>pageInfo</code> 来局部启用它。</p>
+<h2 id="原创标识"> 原创标识</h2>
+<p>你可以在页面 frontmatter 中设置 <code>original</code> 为 <code>true</code> 来为你的文章添加原创标签。</p>
+]]></content>
+    <author>
+      <name>Mr.Hope</name>
+    </author>
+    <contributor>
+      <name>Mr.Hope</name>
+    </contributor>
+    <published>2022-01-21T13:17:30.000Z</published>
+    <rights>Copyright by Mr.Hope</rights>
+  </entry>
+</feed>

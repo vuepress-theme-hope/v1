@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://vuepress-theme-hope.github.io/v1/git/zh/</id>
+  <title>基于 Git 的信息插件</title>
+  <subtitle>VuePress 的 Git 信息插件</subtitle>
+  <author>
+    <name>Mr.Hope</name>
+  </author>
+  <updated>2022-09-24T09:28:19.797Z</updated>
+  <generator>vuepress-plugin-feed1</generator>
+  <link rel="self" href="https://vuepress-theme-hope.github.io/v1/git/atom.xml"/>
+  <link rel="alternate" href="https://vuepress-theme-hope.github.io/v1/git/zh/"/>
+  <rights>MIT Licensed | Copyright © 2019-present Mr.Hope</rights>
+</feed>

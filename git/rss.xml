@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.github.io/v1/git/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Git-based info plugin</title>
+    <link>https://vuepress-theme-hope.github.io/v1/git/</link>
+    <description>Info plugin based on git for vuepress</description>
+    <language>en-US</language>
+    <pubDate>Sat, 24 Sep 2022 09:28:19 GMT</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2022 09:28:19 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+  </channel>
+</rss>

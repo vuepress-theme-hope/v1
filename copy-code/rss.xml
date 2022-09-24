@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.github.io/v1/copy-code/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Quick Code Copy</title>
+    <link>https://vuepress-theme-hope.github.io/v1/copy-code/</link>
+    <description>Quick Code Copy Plugin for vuepress</description>
+    <language>en-US</language>
+    <pubDate>Sat, 24 Sep 2022 09:28:11 GMT</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2022 09:28:11 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>Plugin Options</title>
+      <link>https://vuepress-theme-hope.github.io/v1/copy-code/config.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/copy-code/config.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/copy-code/rss.xml">Plugin Options</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="selector"> selector</h2>
+<ul>
+<li>Type: <code>string | string[]</code></li>
+<li>Default: <code>'.theme-default-content div[class*=&quot;language-&quot;] pre'</code></li>
+</ul>
+<p>Code block selector</p>
+<h2 id="duration"> duration</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>2000</code></li>
+</ul>
+<p>Hint display time, setting it to <code>0</code> will disable the hint.</p>
+<h2 id="showinmobile"> showInMobile</h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether to display copy button on the mobile device</p>
+<h2 id="delay"> delay</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>500</code></li>
+</ul>
+<p>The delay of registering copy code buttons, in ms.</p>
+<p>If the theme you are using has a switching animation, it is recommended to configure this option to <code>Switch animation duration + 200</code>.</p>
+<h2 id="pure"> pure</h2>
+<ul>
+<li>Type: <code>false</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Whether generate a small simple button with pure style.</p>
+<h2 id="locales"> locales</h2>
+<ul>
+<li>
+<p>Type: <code>CopyCodeLocaleConfig</code></p>
+<div><pre><code><span>interface</span> <span>CopyCodeLocaleData</span> <span>{</span>
+  <span>/**
+   * Copy button label text
+   */</span>
+  copy<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Success message text after content is copied
+   */</span>
+  hint<span>:</span> <span>string</span><span>;</span>
+<span>}</span>
+
+<span>interface</span> <span>CopyCodeLocaleConfig</span> <span>{</span>
+  <span>[</span>localePath<span>:</span> <span>string</span><span>]</span><span>:</span> CopyCodeLocaleData<span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div></li>
+<li>
+<p>Required: No</p>
+</li>
+</ul>
+<p>Locales config for copy code plugin.</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://vuepress-theme-hope.github.io/v1/copy-code/guide.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/copy-code/guide.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/copy-code/rss.xml">Guide</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="usage"> Usage</h2>
+<p>This plugin will add a copy button to the bottom right corner of each code block.</p>
+<p>By default, the button is only displayed on desktop mode. To display this button on mobile devices, set <code>showInMobile</code> to <code>true</code>.</p>
+<p>After user press the copy button, a success hint will display on the screen. The default hint duration is 2000ms, to change the duration, please set <code>duration</code> in options (ms). To disable the hint, set duration to <code>0</code>.</p>
+<h2 id="demo"> Demo</h2>
+<CodeGroup>
+<CodeGroupItem title=" TS">
+<div><pre><code><span>// .vuepress/config.ts</span>
+<span>export</span> <span>default</span> <span>{</span>
+  plugins<span>:</span> <span>[</span>
+    <span>[</span>
+      <span>"copy-code1"</span><span>,</span>
+      <span>{</span>
+        <span>// your options</span>
+      <span>}</span><span>,</span>
+    <span>]</span><span>,</span>
+  <span>]</span><span>,</span>
+<span>}</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div></CodeGroupItem>
+<CodeGroupItem title=" JS">
+<div><pre><code><span>// .vuepress/config.js</span>
+module<span>.</span>exports <span>=</span> <span>{</span>
+  <span>plugins</span><span>:</span> <span>[</span>
+    <span>[</span>
+      <span>"copy-code1"</span><span>,</span>
+      <span>{</span>
+        <span>// your options</span>
+      <span>}</span><span>,</span>
+    <span>]</span><span>,</span>
+  <span>]</span><span>,</span>
+<span>}</span><span>;</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div></CodeGroupItem>
+</CodeGroup>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

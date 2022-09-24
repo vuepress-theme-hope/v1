@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.github.io/v1/reading-time/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>阅读时间生成</title>
+    <link>https://vuepress-theme-hope.github.io/v1/reading-time/zh/</link>
+    <description>预计阅读时间与字数统计生成</description>
+    <language>zh-CN</language>
+    <pubDate>Sat, 24 Sep 2022 09:27:42 GMT</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2022 09:27:42 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+  </channel>
+</rss>

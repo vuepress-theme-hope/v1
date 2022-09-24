@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.github.io/v1/add-this/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Share Plugin</title>
+    <link>https://vuepress-theme-hope.github.io/v1/add-this/</link>
+    <description>Share Plugin provided by AddThis</description>
+    <language>en-US</language>
+    <pubDate>Sat, 24 Sep 2022 09:28:13 GMT</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2022 09:28:13 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>Options</title>
+      <link>https://vuepress-theme-hope.github.io/v1/add-this/config.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/add-this/config.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/add-this/rss.xml">Options</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="pubid"> pubid</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Required: Yes</li>
+</ul>
+<p>Pubid for Add this</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://vuepress-theme-hope.github.io/v1/add-this/guide.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/add-this/guide.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/add-this/rss.xml">Guide</source>
+      <pubDate>Tue, 13 Oct 2020 05:36:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="register"> Register</h2>
+<p>Go to <a href="https://www.addthis.com/register?next=/dashboard" target="_blank" rel="noopener noreferrer">AddThis registration page<i>Content not supported</i></a> to register.</p>
+<div><p>Note</p>
+<p>If you already registered, ahead to <a href="https://www.addthis.com/login?next=/dashboard" target="_blank" rel="noopener noreferrer">AddThis login page<i>Content not supported</i></a> to login.</p>
+</div>
+<h2 id="usage"> Usage</h2>
+<p>Go to <a href="https://www.addthis.com/dashboard#gallery/" target="_blank" rel="noopener noreferrer">Tools page<i>Content not supported</i></a> then add and configure tools which you need.</p>
+<p>After you finished, enter the <a href="https://www.addthis.com/dashboard#get-the-code/" target="_blank" rel="noopener noreferrer">Get The Code Page<i>Content not supported</i></a> to get your pubid from the code.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

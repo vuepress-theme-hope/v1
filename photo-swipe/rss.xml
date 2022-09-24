@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://vuepress-theme-hope.github.io/v1/photo-swipe/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>Photo preview</title>
+    <link>https://vuepress-theme-hope.github.io/v1/photo-swipe/</link>
+    <description>Photo swipe Plugin for VuePress</description>
+    <language>en-US</language>
+    <pubDate>Sat, 24 Sep 2022 09:28:09 GMT</pubDate>
+    <lastBuildDate>Sat, 24 Sep 2022 09:28:09 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed1</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <copyright>MIT Licensed | Copyright © 2019-present Mr.Hope</copyright>
+    <item>
+      <title>Guide</title>
+      <link>https://vuepress-theme-hope.github.io/v1/photo-swipe/guide.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/photo-swipe/guide.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/photo-swipe/rss.xml">Guide</source>
+      <description>This plugin will make the pictures in the body of the page enter the preview mode when clicked.
+</description>
+      <pubDate>Fri, 26 Feb 2021 15:56:22 GMT</pubDate>
+      <content:encoded><![CDATA[<p>This plugin will make the pictures in the body of the page enter the preview mode when clicked.</p>
+
+<h2 id="browse-mode"> Browse Mode</h2>
+<p>In preview mode, you can:</p>
+<ul>
+<li>Swipe left and right to preview other pictures on the page in order</li>
+<li>View the description of the picture</li>
+<li>Zoom in and zoom out the picture</li>
+<li>View pictures in full screen</li>
+<li>Download pictures</li>
+<li>Share pictures</li>
+</ul>
+<div><p>Tips</p>
+<ul>
+<li>Besides clicking &quot;×&quot; in the upper right corner to exit the preview mode, scrolling up and down more than a certain distance will also exit preview mode</li>
+<li>On cellphones, or using the PC trackpad, you can use pan and zoom gestures to pan and zoom in the preview mode</li>
+</ul>
+</div>
+<h2 id="demo"> Demo</h2>
+<p><img src="/logo.png" alt="Logo1">
+<img src="/logo.png" alt="Logo2">
+<img src="/logo.png" alt="Logo3"></p>
+]]></content:encoded>
+      <enclosure url="https://vuepress-theme-hope.github.io/v1/photo-swipe/logo.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Plugin options</title>
+      <link>https://vuepress-theme-hope.github.io/v1/photo-swipe/config.html</link>
+      <guid>https://vuepress-theme-hope.github.io/v1/photo-swipe/config.html</guid>
+      <source url="https://vuepress-theme-hope.github.io/v1/photo-swipe/rss.xml">Plugin options</source>
+      <pubDate>Sun, 11 Oct 2020 08:23:28 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="selector"> selector</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default: <code>'.theme-default-content :not(a) &gt; img'</code></li>
+</ul>
+<p>Image selector</p>
+<h2 id="options"> options</h2>
+<p>Options passed to <a href="http://photoswipe.com/" target="_blank" rel="noopener noreferrer"><strong>photo-swipe</strong><i>Content not supported</i></a></p>
+<h2 id="delay"> delay</h2>
+<ul>
+<li>Type: <code>number</code></li>
+<li>Default: <code>500</code></li>
+</ul>
+<p>The delay of operating dom, in ms.</p>
+<div><p>Tips</p>
+<p>If the theme you are using has a switching animation, it is recommended to configure this option to <code>Switch animation duration + 200</code>.</p>
+</div>
+<h2 id="locales"> locales</h2>
+<div><pre><code><span>interface</span> <span>PhowoSwipeLocaleData</span> <span>{</span>
+  <span>/**
+   * Close button label text
+   */</span>
+  close<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Full screen button label text
+   */</span>
+  fullscreen<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Share button label text
+   */</span>
+  share<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Zoom button label text
+   */</span>
+  zoom<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Previous image button label text
+   */</span>
+  prev<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Next image button label text
+   */</span>
+  next<span>:</span> <span>string</span><span>;</span>
+
+  <span>/**
+   * Share button config
+   */</span>
+  buttons<span>:</span> PhotoSwipeDefaultUI<span>.</span>ShareButtonData<span>[</span><span>]</span><span>;</span>
+<span>}</span>
+</code></pre>
+<div><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br></div></div><p>Locales config.</p>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
